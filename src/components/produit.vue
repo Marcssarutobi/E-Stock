@@ -179,6 +179,7 @@ export default {
     flex-direction: column;
     gap: 15px;
     padding: 15px;
+    overflow-y: scroll;
 }
 .produit .head{
     width: 100%;
@@ -207,7 +208,7 @@ export default {
     display: flex;
     align-items: center;
     justify-content: center;
-    overflow-y: scroll;
+    
 }
 .produit .content .datatable{
    width: 100%;

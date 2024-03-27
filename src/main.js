@@ -14,6 +14,10 @@ const routes = [
     {
         path:'/stock',
         component:()=>import('@/components/stock.vue')
+    },
+    {
+        path:'/vente',
+        component:()=>import('@/components/Vente.vue')
     }
 ]
 

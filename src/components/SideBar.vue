@@ -31,10 +31,10 @@
               </router-link>
           </li>
           <li>
-              <a href="#">
+              <router-link to="/vente">
                 <i class="fas fa-shopping-cart"></i>
                 <span class="text_link">Vendre</span>
-              </a>
+              </router-link>
           </li>
           <li>
               <a href="#">
