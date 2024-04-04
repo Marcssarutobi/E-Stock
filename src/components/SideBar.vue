@@ -69,10 +69,36 @@
         </div> -->
         <div class="icons">
           <a href="#"><i class="fas fa-bell"></i></a>
-          <a href="#"><i class="fas fa-cog"></i></a>
+          <a href="#"><i class="fas fa-cog" id="btn_cog"></i></a>
         </div>
       </div>
       <router-view/>
+    </div>
+
+    <div class="cog ">
+      <div class="haut">
+        <h1>Paramètres</h1>
+        <i class="fas fa-x" id="x"></i>
+      </div>
+      <div class="bas">
+
+        <a href="#" class="sub_menu_linke">
+          <span class="icon_link"><i class='fas fa-user-pen'></i></span>
+          <sapn class="name_link">Edit Profile</sapn>
+          <sapn class="icon_link"><i class='fas fa-chevron-right' id="chevron"></i></sapn>
+        </a>
+        <a href="#" class="sub_menu_linke">
+          <span class="icon_link"><i class='fas fa-user-plus'></i></span>
+          <sapn class="name_link">Add User</sapn>
+          <sapn class="icon_link"><i class='fas fa-chevron-right' id="chevron"></i></sapn>
+        </a>
+        <a href="#" class="sub_menu_linke">
+          <span class="icon_link"><i class="fa-solid fa-circle-question"></i></span>
+          <sapn class="name_link">Help & Support</sapn>
+          <sapn class="icon_link"><i class='fas fa-chevron-right' id="chevron"></i></sapn>
+        </a>
+
+      </div>
     </div>
 
   </div>
@@ -88,6 +114,14 @@ export default {
     bars.addEventListener('click',()=>{
       nav.classList.toggle('active')
     })
+
+    document.querySelector('#btn_cog').addEventListener('click',()=>{
+      document.querySelector('.cog').classList.toggle('active')
+    })
+    document.querySelector('#x').addEventListener('click',()=>{
+      document.querySelector('.cog').classList.remove('active')
+    })
+
   }
 }
 </script>
@@ -355,5 +389,85 @@ nav .links .person .btns i{
   text-decoration: none;
   color: #061d3d;
   font-size: 22px;
+}
+.cog{
+  position: fixed;
+  top: 88px;
+  right: 0;
+  background: #fff;
+  width: 400px;
+  max-width: 0;
+  height: calc(100vh - 88px);
+  box-shadow: 0 0 5px rgba(0, 0, 0, .5);
+  transition: all 0.5s ease;
+}
+.cog.active{
+  max-width: 400px;
+}
+.cog .haut{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 0 5px rgba(0, 0, 0, .2);
+  height: 80px;
+  padding: 20px;
+  width: 100%;
+}
+.cog .haut h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 30px;
+}
+.cog .haut i {
+    font-size: 20px;
+    cursor: pointer;
+}
+.cog .bas{
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.cog .bas .sub_menu_linke{
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  text-decoration: none;
+  gap: 10px;
+  width: 100%;
+  height: 50px;
+  padding: 0 10px;
+  color: #0a2c5a;
+}
+.cog .bas .sub_menu_linke:hover{
+  background: #e5e5e5;
+  border-radius: 10px;
+}
+.cog .bas .sub_menu_linke .icon_link{
+  flex: 1;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 19px;
+}
+.cog .bas .sub_menu_linke  .name_link{
+  flex: 5;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  font-size: 19px;
+}
+.cog .bas .sub_menu_linke #chevron {
+    transition: transform 0.5s;
+}
+
+.cog .bas .sub_menu_linke:hover #chevron {
+    transform: translateX(5px);
 }
 </style>
