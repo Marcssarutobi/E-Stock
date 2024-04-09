@@ -82,19 +82,19 @@
       </div>
       <div class="bas">
 
-        <a href="#" class="sub_menu_linke">
+        <router-link to="#" class="sub_menu_linke">
           <span class="icon_link"><i class='fas fa-user-pen'></i></span>
-          <sapn class="name_link">Edit Profile</sapn>
+          <sapn class="name_link">Modifier un Compte</sapn>
           <sapn class="icon_link"><i class='fas fa-chevron-right' id="chevron"></i></sapn>
-        </a>
-        <a href="#" class="sub_menu_linke">
+        </router-link>
+        <router-link to="/addUser" class="sub_menu_linke">
           <span class="icon_link"><i class='fas fa-user-plus'></i></span>
-          <sapn class="name_link">Add User</sapn>
+          <sapn class="name_link">Ajouter un Compte</sapn>
           <sapn class="icon_link"><i class='fas fa-chevron-right' id="chevron"></i></sapn>
-        </a>
+        </router-link>
         <a href="#" class="sub_menu_linke">
           <span class="icon_link"><i class="fa-solid fa-circle-question"></i></span>
-          <sapn class="name_link">Help & Support</sapn>
+          <sapn class="name_link">Aide & Support</sapn>
           <sapn class="icon_link"><i class='fas fa-chevron-right' id="chevron"></i></sapn>
         </a>
 
@@ -121,6 +121,12 @@ export default {
     document.querySelector('#x').addEventListener('click',()=>{
       document.querySelector('.cog').classList.remove('active')
     })
+    
+    document.querySelectorAll('.sub_menu_linke').forEach(btn => {
+      btn.addEventListener('click', () => {
+          document.querySelector('.cog').classList.remove('active');
+      });
+    });
 
   }
 }
@@ -399,6 +405,7 @@ nav .links .person .btns i{
   max-width: 0;
   height: calc(100vh - 88px);
   box-shadow: 0 0 5px rgba(0, 0, 0, .5);
+  overflow: hidden;
   transition: all 0.5s ease;
 }
 .cog.active{
@@ -462,6 +469,7 @@ nav .links .person .btns i{
   align-items: center;
   justify-content: flex-start;
   font-size: 19px;
+  white-space: nowrap;
 }
 .cog .bas .sub_menu_linke #chevron {
     transition: transform 0.5s;
