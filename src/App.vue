@@ -1,6 +1,7 @@
 <template>
   <main>
-    <SideBar/>
+    <SideBar v-if="side"/>
+    <login v-else />
 
   </main>
 </template>
@@ -8,10 +9,17 @@
 <script>
 
 import SideBar from './components/SideBar.vue';
+import Login from './components/login.vue';
 export default {
   name: 'App',
   components:{
-    SideBar
+    SideBar,
+    Login,
+  },
+  computed:{
+    side(){
+      return this.$route.path !== '/login'
+    }
   }
   
 }

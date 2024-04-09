@@ -18,6 +18,10 @@ const routes = [
     {
         path:'/vente',
         component:()=>import('@/components/Vente.vue')
+    },
+    {
+        path:'/login',
+        component:()=>import('@/components/login.vue')
     }
 ]
 
