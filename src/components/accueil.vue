@@ -55,10 +55,6 @@
               <th scope="col">Qte Vendue</th>
               <th scope="col">Prix Unitaire(FCFA)</th>
               <th scope="col">Prix Totale(FCFA)</th>
-              <th scope="col">Montant Payé(FCFA)</th>
-              <th scope="col">Reste à Payé(FCFA)</th>
-              <th scope="col">Monnaie</th>
-              <th scope="col">Status</th>
             </tr>
           </thead>
           <tbody>
@@ -68,10 +64,6 @@
               <td>03</td>
               <td>500</td>
               <td>1500</td>
-              <td>2000</td>
-              <td>0</td>
-              <td>500</td>
-              <td class=" text-success ">Payé</td>
             </tr>
             <tr>
               <th scope="row">98765432</th>
@@ -79,10 +71,6 @@
               <td>05</td>
               <td>300</td>
               <td>1200</td>
-              <td>1500</td>
-              <td>0</td>
-              <td>1500</td>
-              <td class="text-success">Payé</td>
             </tr>
             <tr>
               <th scope="row">76543210</th>
@@ -90,10 +78,6 @@
               <td>02</td>
               <td>750</td>
               <td>2000</td>
-              <td>2750</td>
-              <td>0</td>
-              <td>2750</td>
-              <td class="text-success">Payé</td>
             </tr>
             <tr>
               <th scope="row">54321098</th>
@@ -101,10 +85,6 @@
               <td>01</td>
               <td>400</td>
               <td>800</td>
-              <td>1200</td>
-              <td>0</td>
-              <td>1200</td>
-              <td class="text-success">Payé</td>
             </tr>
             <tr>
               <th scope="row">24681012</th>
@@ -112,10 +92,6 @@
               <td>04</td>
               <td>200</td>
               <td>600</td>
-              <td>800</td>
-              <td>0</td>
-              <td>800</td>
-              <td class="text-success">Payé</td>
             </tr>
           </tbody>
         </table>

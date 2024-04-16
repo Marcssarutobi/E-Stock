@@ -268,7 +268,50 @@
             </div>
         </div>
 
-        <i class="fa fa-plus bas"></i>
+        <i @click="addProd = true" class="fa fa-plus bas"></i>
+
+        <!-- Start Add Produits -->
+
+        <div v-if="addProd" class="modal fade show"  tabindex="-1" style="display: block; background: rgba(0, 0, 0, .5);">
+            <div class="modal-dialog modal-xl modal-dialog-centered" >
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Ajouter un produits</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" @click="addProd = false" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        
+                        <div class="form-floating mb-3">
+                            <input type="text" class="form-control" id="floatingInput" placeholder="Nom Produits" style="background: #ececec;">
+                            <label for="floatingInput">Nom du produits<span style="color: red;">*</span></label>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <select class="form-select" id="floatingInput" style="background: #ececec;">
+                                <option selected disabled>Selectionnez une catégorie</option>
+                            </select>
+                            <label for="floatingInput">Catégorie<span style="color: red;">*</span></label>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input type="number" class="form-control" id="floatingInput" placeholder="Nom Produits" style="background: #ececec;">
+                            <label for="floatingInput">Quantité à Stocké<span style="color: red;">*</span></label>
+                        </div>
+                        <div class="form-floating" >
+                            <input type="number" class="form-control" id="floatingInput" placeholder="Nom Produits" style="background: #ececec;">
+                            <label for="floatingInput">Prix Unitaire<span style="color: red;">*</span></label>
+                        </div>
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-outline-danger rounded-0" @click="addProd = false" data-bs-dismiss="modal">Fermer</button>
+                        <button type="button" class="btn btn-primary rounded-0">Sauvegarder</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- End Add Produits -->
+
+
     </div>
 
   </main>
@@ -299,7 +342,9 @@ export default {
             lien1: 'link active',
             lien2: 'link',
             Entrer: true,
-            Sortie: false
+            Sortie: false,
+            addProd : false,
+            btnactive: false
         }
     },
     methods: {
@@ -314,7 +359,7 @@ export default {
             this.lien2 = 'link active'
             this.Entrer = false
             this.Sortie = true
-        }
+        },
     }
 }
 </script>
@@ -448,4 +493,9 @@ export default {
     cursor: pointer;
     z-index: 1000;
 }
+
+
+
+
+
 </style>

@@ -101,10 +101,10 @@ export default {
     }
     .right .logo i{
         color: #fff;
-        font-size: 45px;
+        font-size: 25px;
     }
     .right .logo .text{
-        font-size: 35px;
+        font-size: 20px;
         color: #fff;
         font-weight: 600;
     }
@@ -124,12 +124,12 @@ export default {
         margin-top: -100px;
     }
     .panel .content h1{
-        font-size: 60px;
+        text-align: center;
         font-weight: 600;
         color: #fff;
     }
     .panel .content p{
-        font-size: 25px;
+        font-size: 20px;
         color: #fff;
         text-align: center;
     }
